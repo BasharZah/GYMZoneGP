@@ -1,0 +1,76 @@
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button> </ion-menu-button>
+    </ion-buttons>
+    <ion-title>GYM Zone</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="A">
+    <form (ngSubmit)="onSubmit(accountForm)" #accountForm="ngForm">
+     
+
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="6">
+              <ion-item>
+                <ion-input placeholder="Full Name" type="text" name="fullName" [(ngModel)]="fullName" required></ion-input>
+            
+              </ion-item>
+            </ion-col>
+            <ion-col size="6">
+              <ion-item>
+                <ion-input placeholder="Sports Type" type="text" name="sportsType" [(ngModel)]="sportsType" required></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+
+          <ion-row>
+            <ion-col size="6">
+              <ion-item>
+                <ion-input placeholder="Mobile Number" type="tel" position="floating" name="phone" [(ngModel)]="phone" required></ion-input>
+            
+              </ion-item>
+            </ion-col>
+            <ion-col size="6">
+              <ion-item>
+                <ion-input placeholder="Email" type="email" position="floating" name="email" [(ngModel)]="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row> 
+
+          <ion-row>
+            <ion-col size="6">
+              <ion-item>
+                <ion-input placeholder="Experience" type="number" position="floating" name="experience" [(ngModel)]="experience" required></ion-input>
+            
+              </ion-item>
+            </ion-col>
+            <ion-col size="6">
+              <ion-item>
+                <ion-input placeholder="Birth of Date" type="date" position="floating" name="birthDate" [(ngModel)]="birthDate" required></ion-input>
+            
+              </ion-item>
+            </ion-col>
+          </ion-row>
+ 
+
+        </ion-grid>
+      </ion-card-content>
+
+ 
+
+      
+      <ion-card-content>
+        <p><ion-button expand="block" class="main-button" shape="round" type="submit" [disabled]="!accountForm.valid">Add</ion-button></p>
+      </ion-card-content>
+
+    </form>
+  </div>
+</ion-content>

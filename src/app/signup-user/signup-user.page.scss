@@ -1,0 +1,99 @@
+ion-content{
+ 
+    text-align: center;
+   --background: var(--ion-color-dark)url('../../assets/Login.jpg') no-repeat center center/cover;
+    --ion-background-color:none;
+   // --background: linear-gradient( 135deg, #FF6FD8 10%, #3813C2 100%);
+  
+    
+  }
+  h2{
+    margin-top:19%;
+  font-weight: bold;
+  }
+  
+  #A{
+  height: 50vh;
+  width:100%;
+  border-radius: 50%;
+  margin-left: 0vw;
+   //--background: var(--ion-color-dark)url('../../assets/imgs/m2.png');
+  }
+  
+  ion-button{
+    
+    border-radius: 50%;
+    margin-left: 25%;
+    width: 50%;
+    --background: linear-gradient( 135deg, #92e0c6 10%, #177c28 100%);
+    margin-right: 25%;
+  }
+  
+  .card-content-md{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+    .title{
+     
+   font-size: 50xp;
+   color:#075811 ;
+    font-family:'Times New Roman', Times, serif ;
+    //font-size:60px large;
+    font-style: blod;
+  } 
+  ion-icon{
+    color:#bdb5bc ;
+  
+  }
+  .ion-card-footer{
+    
+    span{
+    font-size: 12px;
+    font-weight: 200;
+    }
+    button{
+  
+      color :#721c67 ;
+     
+    }
+  }
+
+  .validation-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  ion-input{
+    font-size: 14px;
+  }
+  
+    //.background-container{
+   // height: 100vh;
+    //width: 100%;
+  // display:flexbox ;
+   // background: url('../../assets/imgs/images3.jpg');
+  // background: #FFF;
+   // background-repeat: no-repeat;
+  //background-size:cover ;
+  //background-position:50%;
+  //flex-direction:column ;
+  //justify-content:center ;
+  //}
+  
+  //.container{
+  
+   // min-height: 600px ;
+   // width: 90%;
+   // bottom: 0;
+    //position:absolute;
+   // border-top-left-radius: 20px;
+    //border-top-right-radius: 20px;
+    //}
+  
+    
+    
+    //.ion-text {
+      //font-variant:normal;
+    //}

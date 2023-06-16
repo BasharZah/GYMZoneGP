@@ -1,0 +1,95 @@
+/* Header */
+ion-header {
+  ion-toolbar {
+    --ion-toolbar-background: #333;
+    color: #fff;
+  }
+}
+ 
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.transparent-card {
+  background-color: rgb(128 128 128 / 35%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  height: fit-content;
+  min-height: 350px;
+}
+
+.transparent-card ion-item {
+  --background: transparent;
+}
+
+.transparent-card ion-label {
+  color: white; /* Optional: Change the label color if needed */
+}
+
+.transparent-card ion-input {
+  --background: transparent;
+  color: white; /* Optional: Change the input text color if needed */
+}
+
+.transparent-card .error-message {
+  color: red; /* Optional: Change the error message color if needed */
+}
+
+.transparent-card ion-button {
+  
+  color: white; /* Optional: Change the button text color if needed */
+}
+
+
+
+/* Content */
+/*
+ion-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ion-grid {
+
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    ion-item.UName {
+      ion-label {
+        --ion-color-base: #333;
+      }
+    }
+
+    ion-item.pass {
+      ion-label {
+        --ion-color-base: #333;
+      }
+    }
+
+    ion-row {
+      ion-col {
+        .error-message {
+          color: red;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    ion-row {
+      ion-col {
+        ion-button.Button {
+          --ion-background-color: #333;
+          --ion-color-base: #fff;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+} */

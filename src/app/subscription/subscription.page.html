@@ -1,0 +1,139 @@
+<br><br><br>
+
+<ion-content [fullscreen]="true">
+
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button> </ion-menu-button>
+        </ion-buttons>
+        <ion-title>GYM Zone</ion-title>
+      </ion-toolbar>
+    </ion-header>
+ <ion-content >
+    <form (ngSubmit)="onSubmit(accountForm)" #accountForm="ngForm">
+      <ion-card-content>
+        
+        <ion-grid>
+          <ion-row>
+            <ion-col size="12">
+              <ion-item> 
+                <ion-select placeholder="Select a sport center" name="sportCenterName" [(ngModel)]="sportCenterName" style="min-width: 100%;" (ionChange) ='getCoacheBySportCeneterID($event)'>
+                  <ion-select-option *ngFor="let center of sport_center" [value]="center">
+                    {{ center.sportCenterName }}
+                  </ion-select-option>
+                </ion-select>
+
+              </ion-item>
+            </ion-col>
+            </ion-row>
+            
+
+         
+
+
+          <ion-row>
+            <ion-col size="12">
+              <ion-item>
+             
+                <ion-select class="custom-select" placeholder="Select a subscription name" name="subscriptionName" [(ngModel)]="subscriptionName" 
+                style="min-width: 100%;" (ionChange)="FillSubscriptionDetails($event)">
+                  <ion-select-option *ngFor="let sport_centers of sport_centers_subscription" [value]="sport_centers">
+                    {{ sport_centers.subscriptionName }}
+                  </ion-select-option>
+                </ion-select>
+ 
+              </ion-item>
+            </ion-col>
+            </ion-row>
+
+            <ion-row> 
+              <ion-col size="12">
+                <ion-item>
+                  <ion-input placeholder="Electronic Payment Number" type="text" position="floating" 
+                  name="electronicPaymentNumber" [(ngModel)]="electronicPaymentNumber" required></ion-input>
+              
+                </ion-item>
+              </ion-col> 
+            </ion-row>
+
+            <ion-row>
+            <ion-col size="12">
+              <ion-item>
+                <ion-input placeholder="Sports Type" type="text" name="sportsType" [(ngModel)]="sportsType" disabled></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+
+          <ion-row>
+ 
+            <ion-col size="12">
+              <ion-item>
+                <ion-input placeholder="Number of Subscription Days" type="number" name="numberSubscriptionDays" [(ngModel)]="numberSubscriptionDays" disabled></ion-input>
+             
+              </ion-item>
+            </ion-col>
+            <ion-col size="12">
+              <ion-item>
+                <ion-input placeholder="Free Days" type="number" position="floating" name="freeDays" [(ngModel)]="freeDays" disabled ></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row> 
+
+          <ion-row>
+
+            <ion-col size="12">
+              <ion-item>
+            <ion-select class="custom-select" placeholder="Select a ages" name="ages" [(ngModel)]="ages" style="min-width: 100%;" disabled>
+              <ion-select-option *ngFor="let age of listages" [value]="age">
+                {{ age }}
+              </ion-select-option>
+            </ion-select>
+            </ion-item>
+            </ion-col>
+
+            <ion-col size="12">
+              <ion-item>
+                <ion-input placeholder="Price" type="number" name="price" [(ngModel)]="price" disabled></ion-input>
+              </ion-item>
+            </ion-col> 
+          </ion-row>
+
+
+          <ion-row>
+
+            <ion-col size="12">
+              <ion-item>
+            <ion-select class="custom-select" placeholder="Select a coache" name="coache" [(ngModel)]="coache" style="min-width: 100%;" disabled>
+              <ion-select-option *ngFor="let coac of coaches" [value]="coac.fullName">
+                {{ coac.fullName }}
+              </ion-select-option>
+            </ion-select>
+            </ion-item>
+            </ion-col>
+
+            <ion-col size="12">
+              <ion-item>
+                <ion-textarea placeholder="Description" type="text" name="description" [(ngModel)]="description" disabled 
+                ></ion-textarea>
+              </ion-item>
+            </ion-col> 
+          </ion-row>
+
+          
+
+
+        </ion-grid>
+      </ion-card-content>
+ 
+
+      <ion-card-content>
+        <p><ion-button expand="block" class="main-button" shape="round" type="submit" [disabled]="!accountForm.valid" >Add</ion-button></p>
+      </ion-card-content>
+ 
+    </form>
+  </ion-content>
+  </div> 
+</ion-content>

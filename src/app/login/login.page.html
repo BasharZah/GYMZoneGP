@@ -1,0 +1,50 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>GYM Zone</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="ion-padding">
+  <div class="container">
+
+   
+
+
+
+
+    <ion-card class="transparent-card">
+      <ion-card-header style="font-size: 34px;
+      text-align: center;
+      color: white;">GYM Zone</ion-card-header>
+      <ion-grid>
+ 
+        <br>
+        <ion-item class="UName">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input [(ngModel)]="email" type="text" class="input"></ion-input>
+        </ion-item>
+        <br>
+        <ion-item class="pass">
+          <ion-label position="floating">Password</ion-label>
+          <ion-input [(ngModel)]="password" type="password" class="input"></ion-input>
+        </ion-item>
+
+        <ion-row>
+          <ion-col size="12" offset="1">
+            <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
+          </ion-col>
+        </ion-row>
+        <br>
+        <ion-row>
+          <ion-col size="4" offset="1">
+            <ion-button expand="full"  (click)="Login()" class="Button" color="success">Login</ion-button>
+          </ion-col>
+
+          <ion-col size="4" offset="2">
+            <ion-button expand="full" (click)="signup()" class="Button signup" color="primary">Sign Up</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </div>
+</ion-content>

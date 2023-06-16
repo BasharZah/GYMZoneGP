@@ -1,0 +1,14 @@
+ 
+
+ion-select{
+    min-width: 100%;
+    padding: 0px;
+}
+
+.select-placeholder.select-text {
+    font-size: 12px !important;
+  }
+
+  .custom-select::part(placeholder) {
+    font-size: 12px; /* Adjust the font size as per your requirement */
+  }

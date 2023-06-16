@@ -1,0 +1,86 @@
+ 
+<br><br><br>
+
+<ion-content [fullscreen]="true"  > 
+ 
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button> </ion-menu-button>
+      </ion-buttons>
+      <ion-title>GYM Zone</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+   
+
+
+    <form (ngSubmit)="onSubmit(accountForm)" #accountForm="ngForm">
+      <br>
+    <ion-item>
+      <ion-label position="stacked">Main Image</ion-label>
+      <ion-input type="text" readonly (click)="fileMainImageInput.click()">
+        <ion-icon name="document" slot="start" aria-label="File Icon"></ion-icon>
+        <span>{{ selectedMainImageName || 'Select a main image' }}</span>
+      </ion-input>
+      <input type="file" (change)="onFileSelected($event,0)" #fileMainImageInput style="display: none;">
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="stacked">Description</ion-label>
+      <ion-textarea name = "description" [(ngModel)]="description" placeholder="Enter description"></ion-textarea>
+
+    </ion-item>
+
+ 
+    <ion-item>
+      <ion-label position="stacked">Image 1</ion-label>
+      <ion-input type="text" readonly (click)="fileImage1Input.click()">
+        <ion-icon name="document" slot="start" aria-label="File Icon"></ion-icon>
+        <span>{{ selectedMainImage1Name || 'Select a image 1' }}</span>
+      </ion-input>
+      <input type="file" (change)="onFileSelected($event,1)" #fileImage1Input style="display: none;">
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="stacked">Image 2</ion-label>
+      <ion-input type="text" readonly (click)="fileImage2Input.click()">
+        <ion-icon name="document" slot="start" aria-label="File Icon"></ion-icon>
+        <span>{{ selectedMainImage2Name || 'Select a image 2' }}</span>
+      </ion-input>
+      <input type="file" (change)="onFileSelected($event,2)" #fileImage2Input style="display: none;">
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="stacked">Image 3</ion-label>
+      <ion-input type="text" readonly (click)="fileImage3Input.click()">
+        <ion-icon name="document" slot="start" aria-label="File Icon"></ion-icon>
+        <span>{{ selectedMainImage3Name || 'Select a image 3' }}</span>
+      </ion-input>
+      <input type="file" (change)="onFileSelected($event,3)" #fileImage3Input style="display: none;">
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Image 4</ion-label>
+      <ion-input type="text" readonly (click)="fileImage4Input.click()">
+        <ion-icon name="document" slot="start" aria-label="File Icon"></ion-icon>
+        <span>{{ selectedMainImage4Name || 'Select a image 4' }}</span>
+      </ion-input>
+      <input type="file" (change)="onFileSelected($event,4)" #fileImage4Input style="display: none;">
+    </ion-item>
+
+
+    <ion-card-content>
+      <p><ion-button expand="block" class="main-button" shape="round" type="submit" [disabled]="!accountForm.valid" >Add</ion-button></p>
+    </ion-card-content>
+
+    </form>
+  </ion-content>
+</div>
+
+     
+</ion-content>

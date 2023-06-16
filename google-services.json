@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "408290017968",
+    "firebase_url": "https://gymzone-b71ec-default-rtdb.firebaseio.com",
+    "project_id": "gymzone-b71ec",
+    "storage_bucket": "gymzone-b71ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:408290017968:android:2aa9e3ddd280946b643175",
+        "android_client_info": {
+          "package_name": "com.GYM.Zone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "408290017968-03jims89s9rql3eo4t53vavs4tqvkd92.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCokSXDgADRHvaCTzK1DygeCiongf_7fnU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "408290017968-03jims89s9rql3eo4t53vavs4tqvkd92.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

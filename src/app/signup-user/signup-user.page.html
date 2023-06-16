@@ -1,0 +1,110 @@
+<ion-content class="ion-padding">
+  <ion-card-header>
+    <div class="title">
+      <h2>Register Users</h2>
+    </div>
+  </ion-card-header>
+
+  <div id="A">
+    <form (ngSubmit)="onSubmit(accountForm)" #accountForm="ngForm">
+     
+
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="6">
+              <ion-item>
+                <ion-input placeholder="First Name" type="text" name="firstName" [(ngModel)]="firstName" required></ion-input>
+            
+              </ion-item>
+            </ion-col>
+            <ion-col size="6">
+              <ion-item>
+                <ion-input placeholder="Last Name" type="text" name="lastName" [(ngModel)]="lastName" required></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+
+          <ion-row>
+            <ion-col size="6">
+              <ion-item>
+                <ion-input placeholder="Mobile Number" type="tel" position="floating" name="phone" [(ngModel)]="phone" required></ion-input>
+            
+              </ion-item>
+            </ion-col>
+            <ion-col size="6">
+              <ion-item>
+                <ion-input placeholder="Email" type="email" position="floating" name="email" [(ngModel)]="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col size="6">
+              <ion-item>
+                <ion-input placeholder="Height" type="number" position="floating" name="height" [(ngModel)]="height" required></ion-input>
+            
+              </ion-item>
+            </ion-col>
+            <ion-col size="6">
+              <ion-item>
+                <ion-input placeholder="Weight" type="number" position="floating" name="weight" [(ngModel)]="weight" required ></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col size="6">
+              <ion-item>
+                <ion-input placeholder="Birth of Date" type="date" position="floating" name="birthDate" [(ngModel)]="birthDate" required></ion-input>
+            
+              </ion-item>
+            </ion-col>
+            <ion-col size="6">
+              <ion-item>
+                <ion-input placeholder="Is Has Sick" type="text" position="floating" name="isHasSick" [(ngModel)]="isHasSick" ></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col size="6">
+              <ion-item>
+                <ion-input name="password" placeholder="Password" type="password" [(ngModel)]="password" required pattern="^.{8}$"></ion-input>
+            
+              </ion-item>
+
+              <div *ngIf="accountForm.controls['password']?.invalid && accountForm.controls['password']?.touched">
+                <p class="validation-message">Password must contain at least 8 characters including uppercase, lowercase, and numeric characters.</p>
+              </div>
+
+            </ion-col>
+            <ion-col size="6">
+              <ion-item>
+                <ion-input name="confirmPassword" placeholder="Confirm Password" type="password" [(ngModel)]="confirmPassword" required pattern="^.{8}$"></ion-input>
+              </ion-item>
+
+              <div *ngIf="accountForm.controls['confirmPassword']?.invalid && accountForm.controls['confirmPassword']?.touched">
+                <p class="validation-message">Password must contain at least 8 characters including uppercase, lowercase, and numeric characters.</p>
+              </div>
+
+            </ion-col>
+          </ion-row>
+
+
+        </ion-grid>
+      </ion-card-content>
+
+ 
+
+      <div class="ion-card-footer">
+        <span>Already Have an Account? <button class="ion-no-padding" (click)="Login()">Login</button></span>
+      </div>
+
+      <ion-card-content>
+        <p><ion-button expand="block" class="main-button" shape="round" type="submit" [disabled]="!accountForm.valid">Sign Up</ion-button></p>
+      </ion-card-content>
+    </form>
+  </div>
+</ion-content>

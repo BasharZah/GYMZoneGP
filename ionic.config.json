@@ -1,0 +1,8 @@
+{
+  "name": "GymZone",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

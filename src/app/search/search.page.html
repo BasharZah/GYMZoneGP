@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-toolbar>
+    <ion-title>
+      Search
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+ <ion-content >
+  <ion-searchbar [debounce]="1000" (ionInput)="handleInput($event)">
+
+  </ion-searchbar>
+  
+    <ion-list>
+      <ion-item (click)="goToNewPage()" *ngFor="let result of results" >
+        <ion-label >{{ result }}</ion-label>
+      </ion-item>
+</ion-list>
+<ion-button  class="button" href="" color="none">Back</ion-button>
+</ion-content>

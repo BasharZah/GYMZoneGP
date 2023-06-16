@@ -1,0 +1,64 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+
+    <ion-menu contentId="main-content" type="overlay">
+
+      <ion-header>
+        <ion-toolbar class="m">
+
+          <ion-row >
+            <ion-col size="4" style="margin-inline-start: 8px;">
+              <ion-img style="width:60px ; height: 60px;" src="../../assets/Drawer_ProfilePic.png">
+              </ion-img>  
+            </ion-col>
+            <ion-col style="top: 20px;font-size: 34px ;">
+              GYM Zone 
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col style="text-align: start;">
+              <ion-text style=" font-size: 14px;   font-weight: 600;margin-inline-start: 8px;">
+                {{this.userName}}</ion-text>
+            </ion-col>
+          </ion-row>
+
+          
+
+
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+
+        <ion-list id="inbox-list">
+
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of this.pages; let i = index">
+
+            
+
+            <ion-item  (click)="selectedIndex = i" lines="full" routerDirection="root"
+              [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
+              <ion-icon slot="start" [name]="p.icon" style="font-size: 18px;"></ion-icon>
+
+              <ion-label style="font-size: 11.5px; font-family: Verdana;">{{ p.title }}</ion-label>
+            </ion-item>
+
+
+          </ion-menu-toggle>
+        </ion-list>
+
+
+        <ion-item tappable expand="block" (click)="logout()" style="font-size: 11.5px; font-family: Verdana;">
+          <ion-icon style="font-size: 18px;" name="log-out" slot="start"></ion-icon>
+          Log out
+        </ion-item>
+
+
+      </ion-content>
+    </ion-menu>
+
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+
+  </ion-split-pane>
+</ion-app>

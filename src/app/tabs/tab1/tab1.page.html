@@ -1,0 +1,308 @@
+<br><br><br>
+
+<ion-content [fullscreen]="true">
+
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button> </ion-menu-button>
+        </ion-buttons>
+        <ion-title>GYM Zone</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+
+
+
+
+      <div *ngIf="UserType == 1">
+
+        <ion-card>
+          <ion-card-header>My Information</ion-card-header>
+          <ion-grid>
+
+            <ion-row>
+              <ion-col size="6">
+                <ion-item>
+                  <ion-label>First Name
+                    <br><br>
+                    <span id="firstName" [textContent]='firstName'></span>
+
+                  </ion-label>
+
+                </ion-item>
+              </ion-col>
+
+              <ion-col size="6">
+                <ion-item>
+                  <ion-label>
+                    Last Name <br><br> <span id="lastName" [textContent]='lastName'></span>
+                  </ion-label>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col size="6">
+                <ion-item>
+                  <ion-label>
+                    Email <br><br> <span id="email" [textContent]='email'></span></ion-label>
+                </ion-item>
+              </ion-col>
+
+              <ion-col size="6">
+                <ion-item>
+                  <ion-label> Phone <br><br> <span id="phone" [textContent]='phone'></span></ion-label>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col size="6">
+                <ion-item>
+                  <ion-label> Height <br><br> <span id="height" [textContent]='height'></span></ion-label>
+                </ion-item>
+              </ion-col>
+
+              <ion-col size="6">
+                <ion-item>
+                  <ion-label> Weight <br><br> <span id="weight" [textContent]='weight'></span></ion-label>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col size="6">
+                <ion-item>
+                  <ion-label>BMI <br><br> <span id="IBM"
+                      [textContent]='(weight / ( height/100 * height/100)).toFixed(2)'></span> </ion-label>
+                </ion-item>
+              </ion-col>
+
+              <ion-col size="6">
+                <ion-item>
+                  <ion-label> Birth Of Date <br><br> <span id="birthDate" [textContent]='birthDate'></span></ion-label>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col size="12">
+                <ion-item>
+                  <ion-label> Is Has Sick <br><br> <span id="isHasSick" [textContent]='isHasSick'></span></ion-label>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+
+          </ion-grid>
+
+        </ion-card>
+
+
+
+
+
+
+
+        <div>
+
+
+          <ion-card>
+            <ion-card-header>My Subscriptions</ion-card-header>
+            <ion-grid *ngFor="let data of MySubscriptions; let i = index">
+              <ion-card-subtitle style="margin-inline-start: 16px;">Subscriptions {{i+1}}</ion-card-subtitle>
+
+
+              <ion-row>
+                <ion-col size="6">
+                  <ion-item>
+                    <ion-label>Sport Center Name
+                      <br><br>
+                      <span id="sport_center_name" [textContent]='data.sport_center_name'></span>
+
+                    </ion-label>
+
+                  </ion-item>
+                </ion-col>
+
+                <ion-col size="6">
+                  <ion-item>
+                    <ion-label>
+                      Subscription Name <br><br> <span id="subscriptionName"
+                        [textContent]='data.subscriptionName'></span>
+                    </ion-label>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col size="6">
+                  <ion-item>
+                    <ion-label>Electronic Payment Number
+                      <br><br>
+                      <span id="payment_number" [textContent]='data.payment_number'></span>
+
+                    </ion-label>
+
+                  </ion-item>
+                </ion-col>
+
+                <ion-col size="6">
+                  <ion-item>
+                    <ion-label>
+                      Sport Type <br><br> <span id="sportsType" [textContent]='data.sportsType'></span>
+                    </ion-label>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col size="6">
+                  <ion-item>
+                    <ion-label>Coache
+                      <br><br>
+                      <span id="Coache" [textContent]='data.Coache'></span>
+
+                    </ion-label>
+
+                  </ion-item>
+                </ion-col>
+
+                <ion-col size="6">
+                  <ion-item>
+                    <ion-label>
+                      Number Subscription Days <br><br> <span id="numberSubscriptionDays"
+                        [textContent]='data.numberSubscriptionDays'></span>
+                    </ion-label>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col size="6">
+                  <ion-item>
+                    <ion-label>Free Days
+                      <br><br>
+                      <span id="freeDays" [textContent]='data.freeDays'></span>
+
+                    </ion-label>
+
+                  </ion-item>
+                </ion-col>
+
+                <ion-col size="6">
+                  <ion-item>
+                    <ion-label>
+                      Ages <br><br> <span id="ages" [textContent]='data.ages'></span>
+                    </ion-label>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col size="12">
+                  <ion-item>
+                    <ion-label>Description
+                      <br><br>
+                      <span id="description" [textContent]='data.description'></span>
+
+                    </ion-label>
+
+                  </ion-item>
+                </ion-col>
+
+              </ion-row>
+
+
+              <br>
+            </ion-grid>
+
+          </ion-card>
+
+          <br><br>
+        </div>
+
+
+      </div>
+
+      <div *ngIf="UserType == 2">
+
+
+        <ion-card>
+          <ion-card-header>My Information</ion-card-header>
+          <ion-grid>
+
+            <ion-row>
+              <ion-col size="6">
+                <ion-item>
+                  <ion-label>Sport Center Name
+                    <br><br>
+                    <span id="sportCenterName" [textContent]='sportCenterName'></span>
+
+                  </ion-label>
+
+                </ion-item>
+              </ion-col>
+
+              <ion-col size="6">
+                <ion-item>
+                  <ion-label>
+                    City <br><br> <span id="city" [textContent]='city'></span>
+                  </ion-label>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col size="6">
+                <ion-item>
+                  <ion-label>Email
+                    <br><br>
+                    <span id="email" [textContent]='email'></span>
+
+                  </ion-label>
+
+                </ion-item>
+              </ion-col>
+
+              <ion-col size="6">
+                <ion-item>
+                  <ion-label>
+                    Phone <br><br> <span id="phone" [textContent]='phone'></span>
+                  </ion-label>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col size="6">
+                <ion-item>
+                  <ion-label>Other Feattures
+                    <br><br>
+                    <span id="otherFeattures" [textContent]='otherFeattures'></span>
+
+                  </ion-label>
+
+                </ion-item>
+              </ion-col>
+
+              <ion-col size="6">
+                <ion-item>
+                  <ion-label>
+                    is Has Store <br><br> <span id="isHasStore" [textContent]='isHasStore'></span>
+                  </ion-label>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+
+          </ion-grid>
+        </ion-card>
+ 
+
+      </div>
+ 
+    </ion-content>
+  </div>
+
+</ion-content>

@@ -1,0 +1,66 @@
+ 
+<br><br><br>
+
+<ion-content [fullscreen]="true"  > 
+ 
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button> </ion-menu-button>
+      </ion-buttons>
+      <ion-title>GYM Zone</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+   
+  </ion-content>
+</div>
+
+    <!--
+  <ion-card >
+    <img src="assets/4.png" >
+    <ion-card-header>
+      <ion-card-title>Body Masters</ion-card-title>
+      <ion-card-subtitle>Special Gym</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      It contains all the requirements of the sports environment (training halls, swimming pools, sports facilities).
+    </ion-card-content>
+  </ion-card>  -->
+
+  <ion-card *ngIf ='this.sport_center.length > 0'>
+
+    <ion-grid >
+
+
+      <ion-row *ngFor="let center of sport_center" (click)= "GoToFullInformation(center)">
+
+        <ion-col size="4">  <img [src]="center.MainImage" alt="Card Image"> </ion-col>
+        <ion-col size="8">  
+          
+          <ion-card-header>
+          <ion-card-title>{{center.sportCenterName}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{center.description ? center.description : '--'}}
+    
+        </ion-card-content>
+      
+      </ion-col> 
+
+      </ion-row>
+
+    </ion-grid> 
+   
+  </ion-card>
+  
+
+  <ion-content *ngIf ='this.sport_center.length == 0'>
+    No Data Found
+    </ion-content>
+
+   
+
+</ion-content>
